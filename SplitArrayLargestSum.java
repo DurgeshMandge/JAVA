@@ -7,22 +7,20 @@
 
 public class SplitArrayLargestSum {
     static int sum =0;
-    static int largestSum =0;
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5};
+        int[] arr = {7,2,5,10,8};
         int k = 2;
-        int ans = minimizedSum(arr,k);
+        int ans = splitArray(arr,k);
         System.out.println(ans);
     }
 
-    private static int minimizedSum(int[] arr, int k) {
-        int start = max(arr);
+    public static int splitArray(int[] nums, int k) {
+        int start = max(nums);
         int end = sum, mid;
 
         while(start<end){
             mid = start+(end-start)/2;
-            int n = divide(arr,mid);
-            // if(n == k){return largestSum;}
+            int n = divide(nums,mid);
             if(n>k){start = mid+1;}
             else{end = mid;}
         }
@@ -30,22 +28,16 @@ public class SplitArrayLargestSum {
     }
 
     private static int divide(int[] arr, int maxSum) {
-        int ans =0 , i=0 , sum = 0;
+        int pieces =1 , i=0 , sum = 0;
         while(i<arr.length){
             sum += arr[i];
-            if(sum > maxSum || i==arr.length-1){
-                ans++;
-                largestSum = (sum-arr[i])>largestSum?(sum-arr[i]):largestSum;
-                if(i!=arr.length-1){
-                    i--;
-                }else{
-                    largestSum = (sum)>largestSum?(sum):largestSum;
-                }
-                sum=0;
+            if(sum > maxSum ){
+                pieces++;
+                sum=arr[i];
             }
             i++;
         }
-        return ans ;
+        return pieces ;
     }
 
     private static int max(int[] arr) {
