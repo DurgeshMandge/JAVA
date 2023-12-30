@@ -8,6 +8,6 @@ public class QuickSort {
     }
 
     private static void quickSort(int[] arr) {
-        
+        int pivot = 
     }
 }
