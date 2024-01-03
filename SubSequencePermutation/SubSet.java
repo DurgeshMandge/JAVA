@@ -8,7 +8,7 @@ public class SubSet {
         subset("", a);
         System.out.println();
         ArrayList<String> ans = subset2("", a);
-        System.out.println(Arrays.toString(ans.toArray()));
+        System.out.println(ans);
     }
 
     private static ArrayList<String> subset2(String p, String u) {
