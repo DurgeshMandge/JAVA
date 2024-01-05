@@ -17,7 +17,7 @@ public class Covert2Dhashmap {
     List<List<Integer>> ans = new ArrayList<List<Integer>>();
     Hashtable<Integer,Integer> h = new Hashtable<>();
     for (int i : nums) {
-        h.put(i, null)
+        h.put(i, null);
     }
     }
 }
