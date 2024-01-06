@@ -15,6 +15,7 @@ public class StartOfCycle {
             ListNode l3 = new ListNode(0);
             ListNode l4 = new ListNode(-4);
             l1.next = l2; l2.next = l3; l3.next = l4; l4.next=l2;
+
             int length = lengthOfCycle(l1);
             
             ListNode s = l1, f = l1;
@@ -26,6 +27,7 @@ public class StartOfCycle {
             }
             System.out.println(f.val);
         }
+
         private static int lengthOfCycle(ListNode l1) {
             ListNode s = l1.next, f = l1.next.next;
             while (s!=f) {
@@ -37,6 +39,7 @@ public class StartOfCycle {
             }
             return count(s,f);
         }
+        
         private static int count(ListNode s, ListNode f) {
             int ans =1;
             s=s.next;
