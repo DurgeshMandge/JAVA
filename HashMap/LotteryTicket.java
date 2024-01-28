@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LoteryTicket5{
+public class LotteryTicket{
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
         Scanner s = new Scanner(System.in);
@@ -14,9 +14,9 @@ public class LoteryTicket5{
                 ans = ans>count?ans:count;
                 count=1;
             }else{
-                set.add(k);
                 count++;
             }
+            set.add(k);
         }
         System.out.println(ans);
     }
