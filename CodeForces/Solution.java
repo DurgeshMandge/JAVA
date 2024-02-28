@@ -7,11 +7,10 @@ public class Solution{
         int z = sc.nextInt();
 
         for(int i=0;i<z;i++){
-
-
-
+            
         }
     
     
+
     }
 }

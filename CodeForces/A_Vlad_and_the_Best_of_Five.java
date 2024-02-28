@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-/**
- * A_Vlad_and_the_Best_of_Five
- */
 public class A_Vlad_and_the_Best_of_Five {
 
     public static void main(String[] args) {
