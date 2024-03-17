@@ -1,4 +1,4 @@
-package Trees;
+// package Trees;
 
 public class BinaryTree {
     public class  Node {
@@ -27,7 +27,7 @@ public class BinaryTree {
         return root==null;
     }
 
-    public void display(){
-        display(root,"Root Node ");
-    }
+    // public void display(){
+    //     display(root,"Root Node ");
+    // }
 }
